@@ -38,6 +38,36 @@
 
 ![image-20200925172002874](.\images\image-20200925172002874.png)
 
+```pseudocode
+monitor resourceRiAllocator;
+var RilsAvailable : boolean,
+	RilsFree : condition,
+
+# 자원 할당 요청
+procedure requestR();
+begin
+	# R 자원을 꺼낼 수 없다면 R_Free에서 기다린다.
+	if not(R_Available) then
+		R_Free.wait();
+	# 자원 할당 받으면 R_Available 이 false
+	R_Available <- false;
+end;
+
+# 자원 반납 
+procedure releaseR();
+begin
+	R_Available <- true;
+	# R_Free에서 대기하고 있는 녀석을 깨우는 신호를 보낸다.
+	R_Free.signal();
+end;
+
+begin
+	RilsAvailable <- true;
+end
+```
+
+
+
 ## 자원 할당 시나리오
 
 - 자원 R 할당 가능
