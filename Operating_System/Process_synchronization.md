@@ -33,18 +33,18 @@
 
 ## Critical Section
 
-![image-20200920231026447](.\images\image-20200920231026447.png)
+![image-20200920231026447](images\image-20200920231026447.png)
 
 - sdata : shared data(critcal data) 공유 데이터
 - 기계어 명령 (machine instruction)의 특성
   - Atomicity, indivisible(분리불가능)
   - 한 기계의 명령의 실행 도중에 인터럽트 받지 않음
 
-![image-20200920231443080](.\images\image-20200920231443080.png)
+![image-20200920231443080](images\image-20200920231443080.png)
 
 - machine instruction 으로 변역된 형태
 
-![image-20200920231655390](.\images\image-20200920231655390.png)
+![image-20200920231655390](images\image-20200920231655390.png)
 
 - 실행 순서에 따라 같은 연산의 결과가 달라지는 현상 -> Race Condition
 
@@ -53,7 +53,7 @@
 - 앞의 예 에서는 1,2,3 이 실행되는 도중 A,B,C가 실행 되는 것을 막아줌 
   - 즉 Critical Section에 하나가 들어가면 다른 것은 못 들어오게 막는 것
 
-![image-20200920232023163](.\images\image-20200920232023163.png)
+![image-20200920232023163](images\image-20200920232023163.png)
 
 - Mutual exclusion primitive (primitive -> 기본이 되는 연산)
   - enterCS()  primitive  (CS: Critical Section)
@@ -76,7 +76,7 @@
 
 - ME primitives version 1
 
-![image-20200920232745031](.\images\image-20200920232745031.png)
+![image-20200920232745031](images\image-20200920232745031.png)
 
 - turn을 나눠서 내 차례가 되면 들어 갈 수 있다.	
 - 상대방이 들어가면 turn 이 바뀜
@@ -88,7 +88,7 @@
     - 한 Process가 두번 연속 CS에 진입 불가 (턴이 바뀌지 않으므로)
 - ME primitives version 2
 
-![image-20200920233343725](.\images\image-20200920233343725.png)
+![image-20200920233343725](images\image-20200920233343725.png)
 
 - Flag의 사용
 - 현재 내가 들어가면 True 나오면 False
@@ -98,7 +98,7 @@
   - Mutual exclusion 조건 위배
 - ME primitives version 3
 
-![image-20200920233800769](.\images\image-20200920233800769.png)
+![image-20200920233800769](images\image-20200920233800769.png)
 
 - 들어갈 것이라 의사를 밝히고 나머지가 없으면 들어감
 - 세가지 필요 조건 검증 (Mutual exclusive, Progress, Bounded waiting)

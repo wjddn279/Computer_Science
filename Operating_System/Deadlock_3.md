@@ -45,7 +45,7 @@
    - 프로세스는 순서의 증가 방향으로만 자원 요청 가능
    - 자원 낭비 발생
 
-![image-20200928105725560](.\images\image-20200928105725560.png)
+![image-20200928105725560](images\image-20200928105725560.png)
 
 - 무조건 순서대로 P1은 1,2,3,4 순서대로 자원을, P2는 1,3 순서대로 증가하는 방향으로 사용
 - 순환 구조가 생기지 않음
@@ -81,7 +81,7 @@
 
 - 1 resource type R(자원), 10 resource units, 3 processes
 
-![image-20200928175918299](.\images\image-20200928175918299.png)
+![image-20200928175918299](images\image-20200928175918299.png)
 
 - Max.Claim (최대 자원 필요수), Cur.Alloc (현재 할당 된 자원 수)
 -  Additional Need = Max.Claim - Cur.Alloc (최대 더 필요한 자원 수)
@@ -95,7 +95,7 @@
 
 ## Unsafe state examle
 
-![image-20200928182028894](.\images\image-20200928182028894.png)
+![image-20200928182028894](images\image-20200928182028894.png)
 
 - Available resource units : 2
 - No safe sequence
@@ -106,14 +106,14 @@
 
 - 1 resource type R, 10 resource units, 3 processes (2개의 자원 사용 가능)
 
-![image-20200928183317416](.\images\image-20200928183317416.png)
+![image-20200928183317416](images\image-20200928183317416.png)
 
 - P1 이 1개의 자원을 요청했다 -> 빌려줬다고 가정하고 시뮬레이션
 - P1을 한개 빌려줬을 때, 그 후 Safe state가 존재하는지 확인하는 시뮬레이션
 
 - Safe state가 존재한다면 자원 할당을 승인하고 자원 할당
 
-![image-20200928183530349](.\images\image-20200928183530349.png)
+![image-20200928183530349](images\image-20200928183530349.png)
 
 - P2가 1개의 자원을 요청했다 -> 빌려줬다고 가정하고 시뮬레이션
 - Safe state가 아니기 때문에 (Unsafe state) 요청을 거절함.
@@ -134,7 +134,7 @@
 - Number of resource units for each type : (10,5,7)
 - 5 process
 
-![image-20200928184313357](.\images\image-20200928184313357.png)
+![image-20200928184313357](images\image-20200928184313357.png)
 
 - Available resource units : 전체 자원 갯수(Number of resource units for each type) :(10,5,7)
 
@@ -144,12 +144,12 @@
 
 - Safe sequence가 존재하므로 Safe state
 
-![image-20200928184455298](.\images\image-20200928184455298.png)
+![image-20200928184455298](images\image-20200928184455298.png)
 
 - P2 에서 (1,0,2) 요청 -> 시뮬레이션 결과 Safe sequence 존재
 - Safe state 이므로 할당 허가
 
-![image-20200928184619734](.\images\image-20200928184619734.png)
+![image-20200928184619734](images\image-20200928184619734.png)
 
 - P1 에서 (0,3,0) 자원 할당 요청 -> 시뮬레이션 결과 Safe sequence 없음
 - Unsafe state 이므로 할당 거부

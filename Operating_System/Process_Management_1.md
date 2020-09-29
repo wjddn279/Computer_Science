@@ -8,7 +8,7 @@
   - 시스템 성능 향상을 위해 커널에 의해 관리 됨
   - 실행 되기 위해 메모리에 적재 된 프로그램(job) -> 프로세스
 
-![image-20200918101405614](.\images\image-20200918101405614.png)
+![image-20200918101405614](images\image-20200918101405614.png)
 
 ## 프로세스의 정의
 
@@ -18,7 +18,7 @@
   - 프로세스 관리 블록(PCB)을 할당 받은 개체
   - 능동적인 개체 (실행중에 각종 자원을 요구,할당,반납하며 진행)
 
-![image-20200918101641351](.\images\image-20200918101641351.png)
+![image-20200918101641351](images\image-20200918101641351.png)
 
 ## 자원(Resource)의 개념
 
@@ -35,7 +35,7 @@
 - 프로세스 생성 시, 생성 됨
 - 커널에 존재
 
-![image-20200918101942582](.\images\image-20200918101942582.png)
+![image-20200918101942582](images\image-20200918101942582.png)
 
 - PCB가 관리하는 정보
 
@@ -70,7 +70,7 @@
      - 메모리가 있다? -> ready
      - 메모리가 없다? -> suspended ready
 
-![image-20200918102651746](.\images\image-20200918102651746.png)
+![image-20200918102651746](images\image-20200918102651746.png)
 
 2. Ready State
    - 프로세서 외에 다른 모든 자원을 할당 받은 상태
@@ -79,7 +79,7 @@
    - Dispatch (or Schedule)
      - Ready state - Running state
 
-![image-20200918102900980](.\images\image-20200918102900980.png)
+![image-20200918102900980](images\image-20200918102900980.png)
 
 3. Runnig State
    - 프로세서와 필요한 자원을 모두 할당 받은 상태
@@ -92,7 +92,7 @@
      - i/o 등 자원 할당 요청
      - 들어와야 할 input 이 없을 떄 asleep 상태에서 대기
 
-![image-20200918103217829](.\images\image-20200918103217829.png)
+![image-20200918103217829](images\image-20200918103217829.png)
 
 4. Blocked/ Asleep state
 
@@ -104,7 +104,7 @@
    - Wake-up
      - Asleep state -> ready state
 
-   ![image-20200918103534990](.\images\image-20200918103534990.png)
+   ![image-20200918103534990](images\image-20200918103534990.png)
 
 5. Suspended State
 
@@ -124,7 +124,7 @@
      - 메모리를 뺏기는 것 -> Swap-out
      - 메모리를 다시 할당 받는 것 -> Swap-in
 
-![image-20200918104127679](.\images\image-20200918104127679.png)
+![image-20200918104127679](images\image-20200918104127679.png)
 
 6. Terminated/Zombie State
    - 프로세스 수행이 끝난 상태
@@ -132,18 +132,18 @@
    - 커널 내에 일부 PCB 정보만 남아 있는 상태
      - 이후 프로세스 관리를 위해 정보 수집
 
-![image-20200918104842231](.\images\image-20200918104842231.png)
+![image-20200918104842231](images\image-20200918104842231.png)
 
 ## Process State Diagram
 
 - 위의 과정을 한 flow로 나타냄
 
-![image-20200918104930666](.\images\image-20200918104930666.png)
+![image-20200918104930666](images\image-20200918104930666.png)
 
 - 프로세스 상태 및 특성
 
-![image-20200918105019494](.\images\image-20200918105019494.png)
+![image-20200918105019494](images\image-20200918105019494.png)
 
 - 프로세스 관리를 위한 자료 구조
 
-![image-20200918105212071](.\images\image-20200918105212071.png)
+![image-20200918105212071](images\image-20200918105212071.png)

@@ -29,7 +29,7 @@
 
 ## 대기시간, 응답시간, 반환시간
 
-![image-20200919105414475](.\images\image-20200919105414475.png)
+![image-20200919105414475](images\image-20200919105414475.png)
 
 - 대기시간 : 도착 ~ 실행 시작
 - 응답시간 : 도착 ~ 첫번째 출력(응답)
@@ -80,7 +80,7 @@
 
   
 
-![image-20200919111239367](.\images\image-20200919111239367.png)
+![image-20200919111239367](images\image-20200919111239367.png)
 
 - Short-term Scheduling 
   - Process Scheduling (Short-term Scheduling의 일종)
@@ -95,11 +95,11 @@
       - scheduling decision = 10ms
       - 10 * (100+10) = 9%의 CPU가 스케줄링을 위해 사용 -> 느릴수록 오버헤드의 증가
 
-![image-20200919111844248](.\images\image-20200919111844248.png)
+![image-20200919111844248](images\image-20200919111844248.png)
 
 - 스케줄링의 단계
 
-![image-20200919111936904](.\images\image-20200919111936904.png)
+![image-20200919111936904](images\image-20200919111936904.png)
 
 ## 스케줄링 정책 (Policy)
 

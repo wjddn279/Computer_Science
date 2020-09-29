@@ -8,7 +8,7 @@
 - Conditional variabel
   - wait(), signal() operations
 
-![image-20200925170943943](.\images\image-20200925170943943.png)
+![image-20200925170943943](images\image-20200925170943943.png)
 
 - Enter queue (진입 큐)
   - 모니터 내의 procedure(function) 수 만큼 존재
@@ -24,7 +24,7 @@
 
 ## 자원 할당 문제
 
-![image-20200925171312876](.\images\image-20200925171312876.png)
+![image-20200925171312876](images\image-20200925171312876.png)
 
 - 비유 : 책방
   - 자원 R : 한권 밖에 없는 책
@@ -36,7 +36,7 @@
   - requestR(): 자원을 요청
   - releaseR() : 자원을 반납
 
-![image-20200925172002874](.\images\image-20200925172002874.png)
+![image-20200925172002874](images\image-20200925172002874.png)
 
 ```pseudocode
 monitor resourceRiAllocator;
@@ -75,7 +75,7 @@ end
 
 1. 프로세스 Pj가 모니터 안에서 자원 R을 요청
 
-![image-20200925172139320](.\images\image-20200925172139320.png)
+![image-20200925172139320](images\image-20200925172139320.png)
 
 2. 프로세스 Pk,Pm이 자원할당 요청
 
@@ -84,22 +84,22 @@ end
 
    - 자원이 없기 때문에 (Pj가 점유하고있기 떄문) R_Free에서 대기
 
-![image-20200925172300915](.\images\image-20200925172300915.png)
+![image-20200925172300915](images\image-20200925172300915.png)
 
 3. Pj가 R 반환
    - R_Free.signal() 호출에 의해 Pk가 wakeup
    - Pj는 signaler queue에서 대기
 
-![image-20200925172608572](.\images\image-20200925172608572.png)
+![image-20200925172608572](images\image-20200925172608572.png)
 
 4. 자원 R이 Pk에게 할당 됨
    - Pj가 모니터 안으로 돌아와서 남은 작업 수행
 
-![image-20200925172759237](.\images\image-20200925172759237.png)
+![image-20200925172759237](images\image-20200925172759237.png)
 
 ## Producer-Consumer Problem
 
-![image-20200925173047974](.\images\image-20200925173047974.png)
+![image-20200925173047974](images\image-20200925173047974.png)
 
  ## Dining philosopher problem
 
@@ -108,7 +108,7 @@ end
 - 공유 자원: 스파게티, 포크
 - 스파게티를 먹기 위해서는 좌우 포크 2개 모두 들어야 함
 
-![image-20200925173647421](.\images\image-20200925173647421.png)
+![image-20200925173647421](images\image-20200925173647421.png)
 
 - Dining philosopher problem
   - pickup(i) : 포크를 집어든다
@@ -118,7 +118,7 @@ end
 
 numforks : 철학자들이 사용할 수 있는 포크 수
 
-![image-20200925175503636](.\images\image-20200925175503636.png)
+![image-20200925175503636](images\image-20200925175503636.png)
 
 ```pseudocode
 monitor dining_philosophers;

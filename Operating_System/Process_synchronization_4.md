@@ -26,7 +26,7 @@
 
 1. Mutual Exclusive problem
 
-![image-20200924234058109](.\images\image-20200924234058109.png)
+![image-20200924234058109](images\image-20200924234058109.png)
 
 - 
 

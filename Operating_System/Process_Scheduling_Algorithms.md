@@ -16,11 +16,11 @@
     - 대기시간 >> 실행시간
   - 긴 평균 응답 시간(response time)
 
-![image-20200919123309255](.\images\image-20200919123309255.png)
+![image-20200919123309255](images\image-20200919123309255.png)
 
 - example
 
-![image-20200919124301554](.\images\image-20200919124301554.png)
+![image-20200919124301554](images\image-20200919124301554.png)
 
 - Normalized TT : Turn around time/ Burst time
   - 사용하기 위해서 얼마나 기다려야 하는지 상대적으로 나타냄
@@ -45,7 +45,7 @@
       - 체감 프로세서 속도 = 실제 프로세서 성능의 1/n
       - high context swithching overhead
 
-![image-20200919125000983](.\images\image-20200919125000983.png)
+![image-20200919125000983](images\image-20200919125000983.png)
 
 - 한번 processor에서 실행되다가 time-out으로 쫓겨난다면 ready queue의 맨 뒤로 가야함
 
@@ -53,7 +53,7 @@
 
 time quantum = 2s
 
-![image-20200919125912088](.\images\image-20200919125912088.png)
+![image-20200919125912088](images\image-20200919125912088.png)
 
 - p1 (0 도착, 3 burst time)
   - 맨 처음에 2초(time quantum) 동안 일하다가 쫓겨남 (context saving을 상태를 통해 PCB에 저장)
@@ -64,7 +64,7 @@ time quantum = 2s
 
 time quantum : 3s 
 
-![image-20200919130051753](C:\Users\multicampus\Desktop\면접 내용 정리\Operating_System\images\image-20200919130051753.png)
+![image-20200919130051753](images\image-20200919130051753.png)
 
 ## Shortest Process Next (SPN)
 
@@ -87,7 +87,7 @@ time quantum : 3s
     - 실행시간 예측 기법이 필요
 - example
 
-![image-20200919130853839](.\images\image-20200919130853839.png)
+![image-20200919130853839](images\image-20200919130853839.png)
 
 ## Shortest Remaining Time Next (SRTN)
 
@@ -116,11 +116,11 @@ time quantum : 3s
 
 - example
 
-![image-20200919131532070](.\images\image-20200919131532070.png)
+![image-20200919131532070](images\image-20200919131532070.png)
 
 ## Summary
 
-![image-20200919131747196](.\images\image-20200919131747196.png)
+![image-20200919131747196](images\image-20200919131747196.png)
 
 - FCFS, RR : process간 공평성을 보장하지만 효율성 성능이 떨어짐
 - SPN -> SRTN -> HRRN 으로 공평성, 효율,성능 모두를 얻기 위해 개선이 이어짐

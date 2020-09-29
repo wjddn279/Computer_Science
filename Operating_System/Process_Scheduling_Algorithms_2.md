@@ -12,7 +12,7 @@
   - 여러 개의 queue 관리 등 스케줄링 overhead-
   - 우선 순위가 낮은 queue는 starvation 현상 발생 (급해도 올라가지 못함)
 
-![image-20200919132502967](.\images\image-20200919132502967.png)
+![image-20200919132502967](images\image-20200919132502967.png)
 
 ## Multi Level Feedback Queue (MFQ)
 

@@ -8,7 +8,7 @@
     - OS support -> P와 V연산은 실행 되는 도중 preemitive 되지 않고 끝까지 실행됨(도중에 쫓겨나지 않음)
     - 전체가 한 instruction cycle에 수행됨
 
-![image-20200921235915771](.\images\image-20200921235915771.png)
+![image-20200921235915771](images\image-20200921235915771.png)
 
 - S : 물건의 갯수 (S == 1: 진입이 가능하다)
 - P(S) 연산 : 물건을 꺼내가는 것 (진입)
@@ -18,7 +18,7 @@
   - S <- S + 1 (물건 반납)
 - 활용 예제
 
-![image-20200922000254410](.\images\image-20200922000254410.png)
+![image-20200922000254410](images\image-20200922000254410.png)
 
 - active : spinlock 변수
 - 초기상태 active는 1이고 Pi가 먼저 접근
@@ -51,7 +51,7 @@
   - S 변수에 초기값을 부여하는 연산
 - P() 연산, V() 연산
 
-![image-20200922001600947](.\images\image-20200922001600947.png)
+![image-20200922001600947](images\image-20200922001600947.png)
 
 - P(S) 연산
   - Spinlock : S가 0 이라면 While 문을 계속 돌았음 (busy waiting)
@@ -64,7 +64,7 @@
 
 1. Mutual Exclusion
 
-![image-20200922001946420](.\images\image-20200922001946420.png)
+![image-20200922001946420](images\image-20200922001946420.png)
 
 - spinlock 대신 semaphore를 사용함으로서 busy waiting 문제 해결
 
@@ -74,9 +74,9 @@
 
 - 예제
 
-![image-20200922002439430](.\images\image-20200922002439430.png)
+![image-20200922002439430](images\image-20200922002439430.png)
 
-![image-20200922002405251](.\images\image-20200922002405251.png)
+![image-20200922002405251](images\image-20200922002405251.png)
 
 - Pj가 먼저 와서 물건 S를 들고 있다고 생각 -> 그 뒤로 온 Pi는 대기실(ready queue)에서 대기
 - Pj가 끝나면 S를 반납하고 ready queue에 있는 Pi를 깨우고 퇴장
@@ -89,7 +89,7 @@
 - 소비자 프로세스
   - 메세지를 전달받는 프로세스 그룹
 
-![image-20200922002818365](.\images\image-20200922002818365.png)
+![image-20200922002818365](images\image-20200922002818365.png)
 
 - 생산자 프로세스가 생산 한 것을 놓고 있는 중에 소비자 프로세스가 가져가면 안됨
 - 생산자 프로세스 끼리도 같은 곳에 동시에 두면 안됨
@@ -100,7 +100,7 @@
   - 물건을 놓는 도중에는 들고가면 안되고, 물건을 놓고 있는데 또 놓으러 오면 안됨
   - -> Critical Section과 비슷한 개념 (한번에 한명만 접근 가능)
 
-![image-20200922003202013](.\images\image-20200922003202013.png)
+![image-20200922003202013](images\image-20200922003202013.png)
 
 - 두개의 semaphore 변수 사용(consumed, produced)
 - Consumed == 1 : buffer에 있는 메세지를 가져갔는가?(buffer가 비었는가? -> producer 접근) 
@@ -110,7 +110,7 @@
 
 - Producer-Consumer problem with N-buffers
 
-![image-20200922004210964](.\images\image-20200922004210964.png)
+![image-20200922004210964](images\image-20200922004210964.png)
 
 - mutexP, mutexC (상호 배제를 위한 semaphore) 즉, 현재 buffer 안에 P가 들어가 있다면 새로운 P는 들어갈 수 없고, C가 들어가 있다면 C가 들어갈 수 없다. -> WHY? 무언가 생산하거나 소비하고 있는데 다른녀석이 들어와서 만들거나 가져 갈 수 없다. 한번에 한명만 들어가서 일해라는 의미
 - nrfull : 채워져 있는 buffer 수 (물건 수), nrempty : 비어있는 buffer 수 (새로만들 남은 공간의 수)
@@ -138,7 +138,7 @@
 
 - Reader-writer problem (Reader preference solution) reader가 우선권 가지고 있음
 
-![image-20200922005836279](.\images\image-20200922005836279.png)
+![image-20200922005836279](images\image-20200922005836279.png)
 
 
 

@@ -6,13 +6,13 @@
 
 - Two process ME을 보장하는 최초의 알고리즘
 
-![image-20200920234134481](.\images\image-20200920234134481.png)
+![image-20200920234134481](images\image-20200920234134481.png)
 
 - 기존의 문제를 해결하기 위해 Flag 와 turn의 개념을 합쳐 문제를 해결
 
 - Algorithm 최적화
 
-![image-20200920234554229](.\images\image-20200920234554229.png)
+![image-20200920234554229](images\image-20200920234554229.png)
 
 ## Dijkstra's Algorithm
 
@@ -22,7 +22,7 @@
   - want-in : 프로세스가 cs 진입 시도 1단계 일 때
   - in-CS : 프로세스의 임계 지역 지입 시도 2단계 및 임계지역 내에 있을 때 
 
-![image-20200920234931161](.\images\image-20200920234931161.png)
+![image-20200920234931161](images\image-20200920234931161.png)
 
 - Step 1.
   - 내가 들어가고 싶다고 의사표현 (flag[i] <- want-in)
@@ -54,9 +54,9 @@
   - Busy waiting
     - Inefficient
 
-![image-20200921000222241](.\images\image-20200921000222241.png)
+![image-20200921000222241](images\image-20200921000222241.png)
 
-![image-20200921000352629](.\images\image-20200921000352629.png)
+![image-20200921000352629](images\image-20200921000352629.png)
 
 - TAS : 현재의 값을 return 하고 그 값은 True로 만들어 준다
 - while (TAS(lock)) do -> lock이 true 이면 계속 cs에 접근 못하고 돌다가

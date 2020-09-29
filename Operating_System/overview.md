@@ -13,13 +13,13 @@
 
 ## 컴퓨터 시스템의 구성
 
-![image-20200917195647248](.\images\image-20200917195647248.png)
+![image-20200917195647248](images\image-20200917195647248.png)
 
 운영체제의 핵심 : kernel 
 
 system call interface : OS kernel에 사용자가 요청의 전달하는 통로 or 사용자가 사용할 수 있는 기능들
 
-![image-20200917195859769](.\images\image-20200917195859769.png)
+![image-20200917195859769](images\image-20200917195859769.png)
 
 
 
@@ -48,7 +48,7 @@ system call interface : OS kernel에 사용자가 요청의 전달하는 통로 
   1. 순차 처리 (OS 없음 , ~1940년대까지 사용)
      - 하나씩 순차적으로 처리
 
-  ![image-20200917203930605](.\images\image-20200917203930605.png)
+  ![image-20200917203930605](images\image-20200917203930605.png)
 
   1. 배치 시스템 batch system (1950년대 ~ 1960년대)
 
@@ -62,9 +62,9 @@ system call interface : OS kernel에 사용자가 요청의 전달하는 통로 
      - 사용자 지향적 (대화형 시스템)
      - 응답시간 단축, 생산성 향상 / 통신 비용 증가, 개인 사용자 체감 속도 저하
 
-  ![image-20200917204102905](.\images\image-20200917204102905.png)
+  ![image-20200917204102905](images\image-20200917204102905.png)
 
-  ![image-20200917204227102](.\images\image-20200917204227102.png)
+  ![image-20200917204227102](images\image-20200917204227102.png)
 
   3. 개인 컴퓨팅 Personal Computing
 
@@ -78,7 +78,7 @@ system call interface : OS kernel에 사용자가 요청의 전달하는 통로 
      - 메모리 등의 자원 공유
      - 성능 향상/ 신뢰성 향상
 
-  ![image-20200917204603025](.\images\image-20200917204603025.png)
+  ![image-20200917204603025](images\image-20200917204603025.png)
 
   5. 분산 처리 시스템 Distributed Processing System
      - 네트워크를 기반으로 구축된 병렬처리 시스템 (Loosely-coupled system)
@@ -86,7 +86,7 @@ system call interface : OS kernel에 사용자가 요청의 전달하는 통로 
      - 각각 운영체제 탑재한 다수의 범용 시스템으로 구성
      - 분산 운영체제를 통해 하나의 프로그램, 자원처럼 사용 가능
 
-  ![image-20200917204824160](.\images\image-20200917204824160.png)
+  ![image-20200917204824160](images\image-20200917204824160.png)
 
   6. 실시간 시스템 Real-time Systems
 
@@ -112,19 +112,19 @@ system call interface : OS kernel에 사용자가 요청의 전달하는 통로 
   - 비상주 프로그램
   - UI등 서비스 프로그램
 
-![image-20200917205553127](.\images\image-20200917205553127.png)
+![image-20200917205553127](images\image-20200917205553127.png)
 
 - 단일 구조 운영체제
   - 커널안에 모든 기능을 넣어 놓은 구조
   - 장점 : 커널 내 모듈간 직접 통신(효율적 자원관리) / 단점: 커널의 거대화 (유지보수 힘듬)
 
-![image-20200917205734348](.\images\image-20200917205734348.png)
+![image-20200917205734348](images\image-20200917205734348.png)
 
 - 계층 구조 운영체제
   - 장점 : 모듈화 (계층간 검증 및 수정 용의), 설계 및 구현의 단순화
   - 단점 : 단일구조 대비 성능 저하
 
-![image-20200917205854559](.\images\image-20200917205854559.png)
+![image-20200917205854559](images\image-20200917205854559.png)
 
 - 마이크로 커널 구조
 

@@ -13,7 +13,7 @@
   - Deadlock 검출을 위해 사용
   - Directed ( 방향성이 있는) , Bipartite(두개의 파트로 나뉜 -> 프로세스와 자원) Graph
 
-![image-20200928202013428](.\images\image-20200928202013428.png)
+![image-20200928202013428](images\image-20200928202013428.png)
 
 - Resource Allocation Graph (RAG)
 
@@ -23,7 +23,7 @@
       - Np is the set of proccess = {P1,P2,..,Pn}
       - and Nr is the set of resources = {R1,R2,...,Rm}
 
-    ![image-20200928202425719](.\images\image-20200928202425719.png)
+    ![image-20200928202425719](images\image-20200928202425719.png)
 
   - processor 와 resource 두개의 집합 (Bipartitle graph)
 
@@ -31,7 +31,7 @@
       - e = (Pi, Rj) : 자원 요청
       - e = (Rj, Pi) : 자원 할당
 
-![image-20200928202530570](.\images\image-20200928202530570.png)
+![image-20200928202530570](images\image-20200928202530570.png)
 
 - Notations 
   - Rk : k type 의 자원
@@ -39,7 +39,7 @@
   - |(a,b)| : (a,b) edge 의 수
 - RAG example
 
-![image-20200928202902869](.\images\image-20200928202902869.png)
+![image-20200928202902869](images\image-20200928202902869.png)
 
 ## Deadlock Detection Method
 
@@ -57,7 +57,7 @@
 - Unblocked process
   - 필요한 자원을 모두 할당 받을 수 있는 프로세스
 
-![image-20200928203146976](.\images\image-20200928203146976.png)
+![image-20200928203146976](images\image-20200928203146976.png)
 
 - 좌변 : Pi 가 요청하는 모든 자원 수
 - 우변 : 전체 갯수 - 사용중 -> 남은 수
@@ -76,7 +76,7 @@
 
 ### Graph Reduction (example 1)
 
-![image-20200928204205250](.\images\image-20200928204205250.png)
+![image-20200928204205250](images\image-20200928204205250.png)
 
 - (a) 에서 P1이 unblocked 상태 이므로 edge P1의 간선 제거
 - (b) 에서 P2이 unblocked 상태 이므로 edge P2의 간선 제거
@@ -84,7 +84,7 @@
 
 ### Graph Reduction (example 2)
 
-![image-20200928204501025](.\images\image-20200928204501025.png)
+![image-20200928204501025](images\image-20200928204501025.png)
 
 - P3 말고는 unblocked 상태가 아님 -> deadlock 상태
 

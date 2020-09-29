@@ -17,7 +17,7 @@
 - Interrupt handling -> interrupt의 원인과 발생 장소 파악, 인터럽트 서비스할건지
 - Interrupt service -> 인터럽트 처리를 위한 서비스
 
-![image-20200918105734690](.\images\image-20200918105734690.png)
+![image-20200918105734690](images\image-20200918105734690.png)
 
 1. 프로세스 Pi가 프로세스를 수행중 interrupt 발생
 
@@ -29,7 +29,7 @@
 5. Interrupt service
 6. PCB에 있는 프로세스 다시 불러옴(Pi가 아닌 다른 context인 Pj가 들어 올 수 있다.)
 
-![image-20200918110451149](.\images\image-20200918110451149.png)
+![image-20200918110451149](images\image-20200918110451149.png)
 
 ## Context Switching (문맥 교환)
 
