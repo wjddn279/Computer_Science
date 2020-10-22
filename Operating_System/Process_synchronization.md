@@ -102,4 +102,4 @@
 
 - 들어갈 것이라 의사를 밝히고 나머지가 없으면 들어감
 - 세가지 필요 조건 검증 (Mutual exclusive, Progress, Bounded waiting)
-  - Progress, Bounded waiting 조건 위배
+  - Progress, Bounded waiting 조건 위배 
