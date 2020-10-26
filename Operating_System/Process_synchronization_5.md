@@ -5,7 +5,7 @@
 ## Monitor
 
 - **공유 데이터와 Critical Section의 집합**
-- Conditional variabel
+- Conditional variable
   - wait(), signal() operations
 
 ![image-20200925170943943](images\image-20200925170943943.png)
