@@ -60,14 +60,26 @@
    - Overview
      - Structure of Network
 
+   - TCP/ IP
    - OSI 7 Layer
      - Pysical Layer
        - Hub, Reapter
      - Data Link Layer
        - Switch, ARP
+     - Network Layer
+       - IP
+       - Routing, Dynamic Routing
+       - ICMP
+       - Subneting
+     - Transport Layer
+       - TCP/ UPD
+       - NAT
+     - Application Layer
+       - DNS
+       - HTTP/HTTPS
 
-3. SW 개발론
+3. JavaScript
 
-4. 컴퓨터 구조
+   - DOM
 
-5. 웹 프로그래밍
+   

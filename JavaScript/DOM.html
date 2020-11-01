@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">DOM Manipulation</h1>
+    <h2 id="langHeader">Programming Languages</h2>
+    <ul>
+      <li class="lang">Python</li>
+      <li class="lang">Java</li>
+      <li class="lang" id="specialLang">JavaScript</li>
+    </ul>
+  
+    <h2 id="frameHeader">Frameworks</h2>
+    <ul>
+      <li class="framework" id="specialFrame">Django</li>
+      <li class="framework">Spring</li>
+      <li class="framework">Vue.js</li>
+    </ul>
+  
+</body>
+<script>
+    // Select -> 기존 document 내의 특정 tag 선택
+
+    // 특정 태그 객체들을 골라서 가져옴
+    // id를 style에 사용하지 않는 이유 -> 자바스크립트에 사용하기 위해
+    const mainHeader = document.querySelector('h1')
+    const langHeader = document.querySelector('#langHeader')
+    const frameHeader = document.querySelector('#frameHeader')
+    console.log(mainHeader)
+
+    // 3. querySelectorAll
+    // 모든 것들을 전부 가져옴(리스트 형태)
+    const langLi = document.querySelectorAll('.lang')
+    const frameworkLi = document.querySelectorAll('.framework')
+    console.log(langLi)
+
+    // querySelector 사용시 여러개의 요소 -> 첫번째로 일치하는 요소
+    const selectOne = document.querySelector('.lang')
+
+    // 복합 선택자
+    const selectDescendant = document.querySelector('body li')
+    const selectChild = document.querySelector('body > li')
+    // console.log(selectDescendant)
+    // console.log(selectChild)
+
+    // 5. getElementById, getElementByClassName
+    const selectSepcialLang = document.getElementById('specialLang')
+    const selectAllLangs = document.getElementsByClassName('framework')
+    const selectAllLiTags = document.getElementsByTagName('li')
+
+
+    // Manipulation -> 조작
+
+    // 1. creation
+    const browserHeader = document.createElement('h2')
+    const ul = document.createElement('ul')
+    const li1 = document.createElement('li')
+    const li2 = document.createElement('li')
+    const li3 = document.createElement('li')
+    // console.log(browserHeader,ul,li1,li2,li3)
+
+    // 2. innerText & innerHTML / append & appendChild
+    browserHeader.innerText = 'Browsers'
+    li1.innerText = 'IE'
+    li2.innerText = '<strong>FireFox</strong>'
+    li3.innerHTML = '<strong>Chrome</strong>'
+    console.log(browserHeader,ul,li1,li2,li3)
+
+    // 3. append DOM
+    const body = document.querySelector('body')
+    body.appendChild(browserHeader)
+    body.appendChild(ul)
+
+    // appendChild -> 맨 앞의 인자 하나만 들어감, append를 해야 전부 들어감
+    ul.append(li1,li2,li3)
+    // ul.appendChild(li1,li2,li3)
+    
+    // 4. Element Styling
+    li1.style.cursor = 'pointer'
+    li2.style.color = 'blue'
+    li3.style.color = 'red'
+
+    // 5. set,get Attribute
+    // id에 king을 집어넣어라
+    li3.setAttribute('id','king')
+    // 속성을 빼와라
+    const getAttr = li1.getAttribute('style')
+    const getAttr2 = li2.getAttribute('style')
+    console.log(getAttr)
+    console.log(getAttr2)
+</script>
+</html>
