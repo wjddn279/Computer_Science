@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="myCheckBox">
+    <hr>
+
+    <form action="/articles" id="myForm">
+        <input type="text">
+        <input type="submit">
+    </form>
+    <hr>
+
+    <a href="https://google.com" target="_blank" id=myLink>Go</a>
+    <hr>
+
+    <input type="text" id="myInput">
+</body>
+<script>
+    const checkBox = document.querySelector("#myCheckBox")
+
+    checkBox.addEventListener('click',function(event){
+        // cancelable -> 이벤트가 취소 가능한지 여부를 true/false로 반환
+        console.log(event)
+        console.log(event.cancelable)
+        // 이벤트의 발생을 막는다.
+        event.preventDefault()
+    })
+
+    const form = document.querySelector('#myForm')
+
+    form.addEventListener('submit',(event) => {
+        // submit도 true -> 따라서 submit 막힘
+        console.log(event)
+        console.log(event.cancelable)
+        event.preventDefault()
+    })
+
+    const link = document.querySelector('#myLink')
+
+    link.addEventListener('click', function(event){
+        console.log(event)
+        console.log(event.cancelable)
+        event.preventDefault()
+    })
+
+    const input = document.querySelector('#myInput')
+
+    input.addEventListener('keydown', function(event){
+        console.log(event)
+        console.log(event.cancelable)
+        event.preventDefault()
+    })
+    // scroll -> preventDefault가 불가능한 event
+    document.addEventListener('scroll', function(event){
+        console.log(event.cancelable)
+        event.preventDefault()
+    })
+</script>
+<style>
+    body{
+        height: 10000px;
+    }
+</style>
+</html>
