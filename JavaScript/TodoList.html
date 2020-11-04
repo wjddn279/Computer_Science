@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>TodoList</button>
+    <ul></ul>
+</body>
+<style>
+    .done{
+        text-decoration: line-through;
+    }
+</style>
+
+<script>
+    const button = document.querySelector('button')
+    const input = document.querySelector('input')
+
+    function addTodoUpdateDelete() {
+        const content = input.value
+
+        if (content) {
+            const li = document.createElement('li')
+            li.innerText = content
+
+            const ul = document.querySelector('ul')
+            ul.appendChild(li)
+            input.value = ''
+
+            // 누르면 style done class 추가
+            li.addEventListener('click',function(event){
+                event.target.classList.toggle('done')
+            })
+            const deleteButton = document.createElement('button')
+            deleteButton.innerText = 'X'
+            deleteButton.style.marginLeft = '10px'
+
+            li.appendChild(deleteButton)
+
+            deleteButton.addEventListener('click',function(event){
+                li.remove()
+                })
+            }
+        else {
+            alert('빈칸 불가능!')
+            }
+        }
+    
+    button.addEventListener('click',addTodoUpdateDelete)
+    input.addEventListener('keydown', function(event){
+        if (event.code === 'Enter') {
+            addTodoUpdateDelete()
+        } 
+    })
+
+</script>
+</html>
