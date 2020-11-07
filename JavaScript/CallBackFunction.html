@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">Click Me!</button>
+</body>
+<script>
+    // 1. My Custom Callback Function
+    const myFunc = function (func){
+        return func
+    }
+
+    const myArgumentFunc = function() {
+        return 'Hello My Func!'
+    }
+
+    result = myFunc(myArgumentFunc)
+    console.log(result)
+    console.log(result())
+    
+    // 2. Map
+    const nums = [1, 2, 3, 4]
+
+    const double = nums.map(function (num){
+        return num * 2
+    })
+
+    console/log(double)
+
+    // 3. Array Helper Method
+    const numbers = [0, 9, 99]
+    const newNumbers = []
+
+    number.forEach(function(num) {
+        newNumbers.push(num+1)
+    })
+
+    console.log(newNumbers)
+
+    // 4. setTimeiyt
+    const helloWorld = function() {
+        console.log('Happy Coding')
+    }
+    setTimeout(helloWorld, 2000)
+
+    // 5. addEventListener
+    const myButton = document.querySelector('#myButton')
+    myButton.addEventListener('click',function(){
+        alert('Happy Coding!')
+    })
+</script>
+</html>
