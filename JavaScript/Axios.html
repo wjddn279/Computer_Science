@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+
+
+axios.get('https://jsonplaceholder.typicode.com/todos/1')
+// Promise의 성공/실패에 대한 약속 이후의 처리를 할 수 있다.
+.then(function(res){
+    console.log(res)
+    return res.data
+})
+// 이전 .then 내부의 CB의 return 값은 다음 .then 내부의 CB의 인자로 넘어온다.
+.then(function(data){
+    console.log(data)
+    return data.title
+})
+.then(function(title){
+    console.log(title)
+})
+// Error는 요청을 1이 아닌 asdf로 변경해서 확인해보자.
+.catch(function(err){
+    console.log(err)
+})
+
+// 함수 앞에 async 키워드를 작성한다.
+async function getTodo() {
+	console.log('1')
+    // Promsise를 return 하는 로직 앞에 await 키워드를 작성한다.
+    await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+    .then(function(res){
+        console.log(res)
+    })
+    console.log('2')
+
+    // 출력 순서 : '1' -> 'res' -> '2' 
+}
+
+getTodo()
+</script>
+</html>
